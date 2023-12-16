@@ -1,4 +1,5 @@
 import 'package:cookies/core/extension/text_theme_extension.dart';
+import 'package:cookies/core/functions/check_orientation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -119,11 +120,12 @@ class _CustomTextFieldState extends State<CustomTextField> {
             readOnly: widget.readOnly ?? false,
             inputFormatters: widget.inputFormatters,
             onTap: widget.onTap,
+
             decoration: InputDecoration(
               prefixIcon: widget.prefixIcon,
               errorText: widget.errorText,
               errorStyle: context.f14400?.copyWith(color: Colors.redAccent),
-              fillColor: widget.fillColor ?? Colors.white,
+              fillColor: widget.fillColor ?? AppColors.offWhite,
               filled: true,
               // suffix: widget.suffixIcon,
               suffixIcon: widget.password
@@ -147,7 +149,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
               floatingLabelStyle: context.f18600
                   ?.copyWith(color: Colors.black, letterSpacing: 1.2),
               contentPadding: widget.contentPadding ??
-                  EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.w),
+                  EdgeInsets.symmetric(
+                      horizontal: isPortrait(context) ? 20.w : 10.w,
+                      vertical: isPortrait(context) ? 20.h : 30.h),
               // floatingLabelBehavior: FloatingLabelBehavior.always,
               hintText: widget.hintText,
               hintStyle: widget.hintStyle ??
@@ -166,14 +170,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
                       widget.borderRadius ?? BorderRadius.circular(16.0)),
               enabledBorder: widget.enabledBorder ??
                   OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: widget.fillColor ?? Colors.white),
+                      borderSide: BorderSide(
+                          color: widget.fillColor ?? AppColors.offWhite),
                       borderRadius:
                           widget.borderRadius ?? BorderRadius.circular(16.0)),
               focusedBorder: widget.focusedBorder ??
                   OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: widget.fillColor ?? Colors.white),
+                      borderSide: BorderSide(
+                          color: widget.fillColor ?? AppColors.offWhite),
                       borderRadius:
                           widget.borderRadius ?? BorderRadius.circular(16.0)),
             ),

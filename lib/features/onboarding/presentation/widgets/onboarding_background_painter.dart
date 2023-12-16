@@ -2,10 +2,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 
-// CustomPaint(
-//     size: Size(390, 477),
-//     painter: RPSCustomPainter(),
-// )
+
 
 class RPSCustomPainter1 extends CustomPainter {
   @override

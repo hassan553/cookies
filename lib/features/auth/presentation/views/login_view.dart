@@ -1,8 +1,11 @@
+import 'package:cookies/core/extension/navigation_extension.dart';
 import 'package:cookies/core/extension/text_theme_extension.dart';
 import 'package:cookies/core/utils/app_assets.dart';
 import 'package:cookies/core/widgets/custom_button.dart';
 import 'package:cookies/core/widgets/custom_text_button.dart';
 import 'package:cookies/core/widgets/custom_text_field.dart';
+import 'package:cookies/features/auth/presentation/views/main_view.dart';
+import 'package:cookies/features/auth/presentation/views/register_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -64,7 +67,8 @@ class LoginView extends StatelessWidget {
                 ),
                 SizedBox(height: 15.h),
                 CustomButton(
-                    function: () {},
+                    function: () =>
+                        context.navigateToReplacement(const MainView()),
                     title: 'Sign In',
                     color: AppColors.primaryColor,
                     textStyle: context.f16600),
@@ -74,7 +78,7 @@ class LoginView extends StatelessWidget {
                   children: [
                     Text('Don\'t have an account? ', style: context.f14700),
                     CustomTextButton(
-                      onTap: () {},
+                      onTap: () => context.navigateToPage(const RegisterView()),
                       text: 'Sign Up',
                       style: context.f14700
                           ?.copyWith(color: AppColors.primaryColor),

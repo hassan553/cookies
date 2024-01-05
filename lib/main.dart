@@ -1,4 +1,5 @@
 import 'package:cookies/features/auth/presentation/views/home_view.dart';
+import 'package:cookies/features/onboarding/presentation/views/onboarding1_view.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,11 +7,7 @@ import 'core/utils/app_theme.dart';
 import 'features/auth/presentation/views/main_view.dart';
 
 void main() {
- runApp(DevicePreview(
-    builder: (_) {
-      return const MyApp();
-    },
-  ));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -22,7 +19,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         title: 'Cookies',
         theme: AppTheme.light(),
-        home: const MainView(),
+        home: const OnBoardingFirstView(),
       ),
     );
   }

@@ -168,7 +168,7 @@ class CookiesWidget extends StatelessWidget {
       Container(
         height: 130.h,
         width: 150.w,
-        alignment: Alignment.center,
+        alignment: Alignment.bottomCenter,
         padding:
             const EdgeInsetsDirectional.symmetric(horizontal: 20, vertical: 10),
         decoration: const BoxDecoration(

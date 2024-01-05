@@ -49,6 +49,18 @@ class Assets {
   /// assets/images/home.png
   static const String imagesHome = "assets/images/home.png";
 
+  /// Assets for imagesOnboarding1
+  /// assets/images/onboarding1.png
+  static const String imagesOnboarding1 = "assets/images/onboarding1.png";
+
+  /// Assets for imagesOnboarding2
+  /// assets/images/onboarding2.png
+  static const String imagesOnboarding2 = "assets/images/onboarding2.png";
+
+  /// Assets for imagesOnboarding3
+  /// assets/images/onboarding3.png
+  static const String imagesOnboarding3 = "assets/images/onboarding3.png";
+
   /// Assets for imagesOnboardingPerson
   /// assets/images/onboarding_person.png
   static const String imagesOnboardingPerson = "assets/images/onboarding_person.png";

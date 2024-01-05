@@ -1,9 +1,11 @@
+import 'package:cookies/core/extension/navigation_extension.dart';
 import 'package:cookies/core/extension/text_theme_extension.dart';
 import 'package:cookies/core/functions/check_orientation.dart';
 import 'package:cookies/core/utils/app_assets.dart';
 import 'package:cookies/core/widgets/custom_button.dart';
 import 'package:cookies/core/widgets/custom_text_button.dart';
 import 'package:cookies/core/widgets/custom_text_field.dart';
+import 'package:cookies/features/auth/presentation/views/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -72,7 +74,7 @@ class RegisterView extends StatelessWidget {
                   children: [
                     Text('Have an account? ', style: context.f14700),
                     CustomTextButton(
-                      onTap: () {},
+                      onTap: () => context.navigateToPage(const LoginView()),
                       text: 'Sign In',
                       style: context.f14700
                           ?.copyWith(color: AppColors.primaryColor),
